@@ -46,6 +46,7 @@ control MyIngress(inout headers hdr,
     /* TODO 1: For solution 2 -> define a table that matches standard_metadata.ingress_port */
     /* TODO 2: For solution 2 -> define an action that modifies the egress_port */
 
+    // Ici, solution 2 avec table :
     action modifyEgress(bit<9> egressPort) {
         standard_metadata.egress_spec = egressPort;
     }
